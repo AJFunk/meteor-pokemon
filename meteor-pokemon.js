@@ -3029,7 +3029,19 @@ if (Meteor.isClient) {
             image: 'http://cdn.bulbagarden.net/upload/b/b1/151Mew.png'
         }
 
-    ]
+    ],
+
+    member1: function () {
+      return Session.get("member1");
+    }
+  });
+
+  Template.body.events({
+    "change .pokemonSelect": function (event, template) {
+      console.log(event.target.value);
+      console.log(event);
+      Session.set("member1", event.target.value);
+    }
   });
 
 }
