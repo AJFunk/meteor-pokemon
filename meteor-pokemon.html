@@ -1,14 +1,19 @@
 <head>
-  <title>meteor-pokemon</title>
+	<title>Pokemon Team Analyzer</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+	<div class="container-fluid">
+		<h1>Meteor Pokemon Team Analyzer</h1>
+		<select>
+			{{#each pokemons}}
+				{{> pokemon}}
+			{{/each}}
+		</select>
+	</div>
 
-  {{> hello}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="pokemon">
+	<option value="{{id}}">#{{id}} {{name}}</option>
 </template>
