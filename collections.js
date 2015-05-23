@@ -1,0 +1,1 @@
+Pokemons = new Mongo.Collection('pokemons');
