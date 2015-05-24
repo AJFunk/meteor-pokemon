@@ -5,10 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
-mizzao:bootstrap-3
 nimble:restivus
 iron:router
 accounts-facebook
 accounts-twitter
+service-configuration
+twbs:bootstrap
+ian:accounts-ui-bootstrap-3

@@ -3,5 +3,6 @@ Meteor.startup(function() {
 		useAuth: true,
 		prettyJson: true
 	});
+	Restivus.addCollection(Teams);
 	Restivus.addCollection(Pokemons);
 });

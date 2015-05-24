@@ -2,8 +2,9 @@
 <head>
 	<title>Pokemon Team Analyzer</title>
 </head>
-
 <body>
+{{> loginButtons}}
+
 	<div class="container-fluid">
 		<h1>Meteor Pokemon Team Analyzer</h1>
 
@@ -58,20 +59,9 @@
 						{{> pokemon}}
 					{{/each}}
 				</select>
+				<button class="btn btn-xs btn-success" id="button">Save</button>
 			</div>
 		</div>
-
 	</div>
-
 </body>
 </template>
-
-<template name="pokemon">
-	<option value="{{image}}">#{{id}} {{name}}</option>
-</template>
-
-<!-- <template name="profile">
-	{{#with pokemons}}
-		<img src="{{image}}"/>
-	{{/with}}	
-</template> -->

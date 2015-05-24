@@ -1,8 +1,6 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+Session.setDefault('counter', 0);
 
-  Template.pokemons.helpers({
+Template.pokemons.helpers({
     pokemons: [
         {
             id: 1,
@@ -3028,19 +3026,12 @@ if (Meteor.isClient) {
             ],
             image: 'http://cdn.bulbagarden.net/upload/b/b1/151Mew.png'
         }
+    ]
+});
 
-    ],
-
-    // pokemons: function() {
-    //     return event.target.image;
-    // }
-  });
-
-  Template.pokemons.events({
-    "change .pokemonSelect": function (event, template) {
-        var picture = event.target.image.value;
-        Pokemons.insert({
-            image: picture
-        });
+Template.pokemons.events({
+    'click #button': function(event) {
+        Meteor.call('addTeam');
+        return false;
     }
-  });
+});
