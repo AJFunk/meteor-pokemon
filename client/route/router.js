@@ -1,3 +1,3 @@
 Router.configure({
-	layoutTemplate: 'pokemons'
+	layoutTemplate: 'index'
 });
